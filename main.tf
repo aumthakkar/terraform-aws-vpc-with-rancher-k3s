@@ -63,8 +63,8 @@ module "compute" {
   public_subnets = module.networking.public_subnets
   public_sg      = module.networking.public_sg
 
-  key_name        = "mtckey"
-  public_key_path = "${path.module}/mtckey.pub"
+  key_name        = "newkey"
+  public_key_path = "${path.module}/newkey.pub"
 
   user_data_path = "${path.root}/scripts/userdata.tftpl"
   dbname         = var.dbname
