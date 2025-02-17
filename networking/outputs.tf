@@ -8,7 +8,7 @@ output "db_subnet_group_name" {
   value = aws_db_subnet_group.pht_rds_subnetgroup.*.id
 }
 
-output "vpc_security_group_ids" {
+output "rds_vpc_security_group_ids" {
   value = [aws_security_group.pht_sg["rds"].id]
 }
 

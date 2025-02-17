@@ -28,7 +28,7 @@ module "database" {
   dbuser                 = var.dbuser
   dbpassword             = var.dbpass
   db_subnet_group_name   = module.networking.db_subnet_group_name[0]
-  vpc_security_group_ids = module.networking.vpc_security_group_ids
+  vpc_security_group_ids = module.networking.rds_vpc_security_group_ids
   db_identifier          = "pht-db"
   skip_db_snapshot       = true
 }
