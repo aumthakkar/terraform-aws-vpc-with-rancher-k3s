@@ -49,7 +49,7 @@ resource "aws_route_table_association" "pht_public_route_table_assoc" {
 
 }
 
-resource "aws_subnet" "pht_private_subnet" {
+resource "aws_subnet" "pht_private_subnets" {
   count = var.private_sn_count
 
   vpc_id            = aws_vpc.pht_vpc.id
@@ -128,5 +128,5 @@ resource "aws_db_subnet_group" "pht_rds_subnetgroup" {
   count = var.db_subnet_group ? 1 : 0
 
   name       = "pht-db-subnetgroup"
-  subnet_ids = aws_subnet.pht_private_subnet.*.id
+  subnet_ids = aws_subnet.pht_private_subnets.*.id
 }
