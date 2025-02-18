@@ -1,3 +1,6 @@
+
+# === loadbalancing/outputs.tf ====
+
 output "lb_tg_arn" {
   value = aws_lb_target_group.pht_tg.arn
 }

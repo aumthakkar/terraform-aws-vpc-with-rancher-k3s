@@ -1,4 +1,5 @@
-# --- root/main.tf ---
+
+# === root/main.tf ===
 
 module "networking" {
   source = "./networking"

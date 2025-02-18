@@ -1,3 +1,6 @@
+
+# === root/outputs.tf ===
+
 output "load_balanacer_endpoint" {
   value = module.loadbalancing.lb_endpoint
 }

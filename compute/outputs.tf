@@ -1,3 +1,6 @@
+
+# === compute/outputs.tf ====
+
 output "instance" {
   value = aws_instance.pht_node[*]
 

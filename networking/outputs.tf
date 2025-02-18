@@ -1,4 +1,5 @@
-# --- networking/outputs.tf ---
+
+# === networking/outputs.tf ===
 
 output "vpc_id" {
   value = aws_vpc.pht_vpc.id
