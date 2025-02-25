@@ -19,7 +19,7 @@ resource "aws_lb_target_group" "pht_tg" {
 
   vpc_id = var.vpc_id
 
-  port     = var.lb_tg_port     # 80
+  port     = var.lb_tg_port     # 80 for prod but used 8000 here
   protocol = var.lb_tg_protocol # HTTP
 
   health_check {
@@ -31,7 +31,7 @@ resource "aws_lb_target_group" "pht_tg" {
   }
 
   lifecycle {
-    ignore_changes        = [name]
+    ignore_changes        = [name] # Used due to avoid creating a new tg due to uuid() interpolated in the name
     create_before_destroy = true
   }
 }
