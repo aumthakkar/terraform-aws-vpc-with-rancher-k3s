@@ -31,7 +31,7 @@ resource "aws_lb_target_group" "pht_tg" {
   }
 
   lifecycle {
-    ignore_changes        = [name] # Used due to avoid creating a new tg due to uuid() interpolated in the name
+    ignore_changes        = [name] # Used to avoid creating a new tg due to uuid() interpolated in the name
     create_before_destroy = true
   }
 }
